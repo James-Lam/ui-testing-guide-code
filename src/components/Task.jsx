@@ -9,13 +9,11 @@ export default function Task({
     <div
       className={`list-item ${state}`}
       role="listitem"
-      aria-label={`task-${id}`}
-    >
+      aria-label={`task-${id}`}>
       <label
         htmlFor="checked"
         aria-label={`archiveTask-${id}`}
-        className="checkbox"
-      >
+        className="checkbox">
         <input
           type="checkbox"
           disabled={true}
@@ -48,9 +46,8 @@ export default function Task({
           onClick={() => onTogglePinTask(state, id)}
           id={`pinTask-${id}`}
           aria-label={state === "TASK_PINNED" ? "unpin" : "pin"}
-          key={`pinTask-${id}`}
-        >
-          <span className={`icon-bell`} />
+          key={`pinTask-${id}`}>
+          <span className={`icon-star`} />
         </button>
       )}
     </div>
